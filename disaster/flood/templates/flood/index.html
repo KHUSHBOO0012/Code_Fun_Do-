@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+  background-color: gainsboro;
+  background: #DBF0F7;
+  font-family: 'Lato', sans-serif;
+}
+
+.credits {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.credits p {
+  margin-bottom: 0px;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: grey;
+}
+.credits p a {
+  color: #4B9996;
+  text-decoration: none;
+}
+
+button {
+  position: absolute;
+  top: 45%;
+  left: 30px;
+  width: 150px;
+  height: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: #171D23;
+  cursor: pointer;
+  outline: none;
+}
+
+.wrapper {
+  width: 370px;
+  height: 370px;
+  border-radius: 100%;
+  background: transparent;
+  background-color: #e6e6e6;
+  border: 10px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.water {
+  background: #80C9F6;
+  width: 110%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  filter: url(#goo);
+  transition: 1.8s ease height;
+}
+.water::before {
+  content: "";
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 485%;
+  background: #80C9F6;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  opacity: 0.5;
+  animation: waves 2.6s ease-in infinite;
+}
+.container{
+    position:absolute;
+    bottom:50;
+    left:40%;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    }
+
+@keyframes waves {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+  20% {
+    left: 1%;
+  }
+  30% {
+    bottom: 0;
+  }
+  45% {
+    bottom: 0.7%;
+    left: 0;
+  }
+  75% {
+    bottom: 0;
+  }
+  85% {
+    left: 0.7%;
+  }
+  95% {
+    left: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.drop {
+  background: inherit;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  left: 50%;
+  bottom: 520%;
+  border-radius: 0 50% 50%;
+  transform: translateX(-50%) rotate(45deg);
+  animation: drop 2.6s ease-in infinite;
+}
+.drop:nth-child(1) {
+  width: 64px;
+  height: 64px;
+  animation-delay: 0.24375s;
+}
+.drop:nth-child(2) {
+  width: 51.2px;
+  height: 51.2px;
+  animation-delay: 0.4875s;
+}
+.drop:nth-child(3) {
+  width: 38.4px;
+  height: 38.4px;
+  animation-delay: 0.73125s;
+}
+.drop:nth-child(4) {
+  width: 25.6px;
+  height: 25.6px;
+  animation-delay: 0.975s;
+}
+
+@keyframes drop {
+  0% {
+    bottom: 520%;
+  }
+  30% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+.start .water {
+  height: 100%;
+}
+
+    </style>
+
+    <script>
+        document.querySelector("button").addEventListener("click", function(){
+            document.querySelector(".wrapper").classList.add('start');
+  setTimeout(function(){
+  document.querySelector(".wrapper").classList.remove('start');
+  }, 5000)
+})
+    </script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+
+        <a class="navbar-brand" href="#">Atmos</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+                <span class = "icon-bar"></span>
+        </button>
+
+    </div>
+       <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+      </ul>
+
+
+  </div>
+</nav>
+
+<h1><center> FLOOD PREDICTION </center></h1>
+
+
+<div class="wrapper">
+  <div class="water">
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+  </div>
+
+  <div class="waves">
+     <svg viewBox="-50 0 500 150" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <path class="st0" d="M499.9,28.3c-150.2-99.6-349.8,100.8-500,1.2l0.2,100l500-1.2L499.9,28.3z" style="stroke: none; fill:#96E6BF;"/>
+    </svg>
+  </div>
+  <div class="waves">
+    <svg viewBox="55 54 500 150" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <path class="st0" d="M-0.1,253.9l500,1.7l0.2-140.9C349.9,255,150.3-73,0.1,113L-0.1,253.9z" style="stroke: none; fill:#67D1CD;"/>
+        </svg>
+      </div>
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          </filter>
+        </defs>
+  </svg>
+
+</div>
+<center><h3>Choose the region from the drop down menu for which you need to predict flood.</h3></center>
+ <div class="container">
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Region
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Andaman & Nicobar Islands</a></li>
+      <li><a href="#">Arunachal Pradesh</a></li>
+      <li><a href="#">Assam & Meghalaya</a></li>
+         <li><a href="#">Nagaland, Manipur, Mizoram, Tripura</a></li>
+         <li><a href="#">Sub Himalayan West Bengal & Sikkim</a></li>
+         <li><a href="#">Gangetic West Bengal</a></li>
+         <li><a href="#">Orissa</a></li>
+         <li><a href="#">Jharkhand</a></li>
+         <li><a href="#">Bihar</a></li>
+         <li><a href="#">East Uttar Pradesh</a></li>
+         <li><a href="#">West Uttar Pradesh</a></li>
+         <li><a href="#">Uttarakhand</a></li>
+        <li><a href="#">Haryana, Delhi & Chandigarh</a></li>
+        <li><a href="#">Punjab</a></li>
+        <li><a href="#">Himachal Pradesh</a></li>
+        <li><a href="#">Jammu & Kashmir</a></li>
+        <li><a href="#">West Rajasthan</a></li>
+        <li><a href="#">East Rajasthan</a></li>
+        <li><a href="#">West Madhya Pradesh</a></li>
+        <li><a href="#">East Madhya Pradesh</a></li>
+        <li><a href="#">Gujarat Region</a></li>
+        <li><a href="#">Saurashtra & Kutch</a></li>
+        <li><a href="#">Konkan & Goa</a></li>
+        <li><a href="#">Madhya Maharashttra</a></li>
+        <li><a href="#">Matathwada</a></li>
+        <li><a href="#">Vidarbha</a></li>
+        <li><a href="#">Chhattisgarh</a></li>
+        <li><a href="#">Coastal Andhra Pradesh</a></li>
+        <li><a href="#">Telangana</a></li>
+        <li><a href="#">Rayalseema</a></li>
+        <li><a href="#">Tamil Nadu</a></li>
+        <li><a href="#">Coastal Karnataka</a></li>
+        <li><a href="#">North Interior Karnataka </a></li>
+        <li><a href="#">South Interior Karnataka</a></li>
+        <li><a href="#">Kerala</a></li>
+        <li><a href="#">Lakshadweep</a></li>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
