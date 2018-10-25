@@ -4,14 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/disaster/flood/predict.py" line="22" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2abcf7db-0b2d-4ad1-aef3-9709c3edf0a3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/disaster/flood/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disaster/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/disaster/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disaster/flood/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/disaster/flood/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disaster/flood/templates/flood/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/disaster/flood/templates/flood/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disaster/flood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/disaster/flood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disaster/flood/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/disaster/flood/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="2abcf7db-0b2d-4ad1-aef3-9709c3edf0a3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="506" />
     <option name="width" value="834" />
     <option name="height" value="554" />
@@ -235,7 +228,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26647145" />
