@@ -36,7 +36,6 @@ dfg = state(statename)
 
 
 
-
 x  = dfg.shape[0]
 k = dfg.index.values[0]
 for i in range(k+1, x+k):
