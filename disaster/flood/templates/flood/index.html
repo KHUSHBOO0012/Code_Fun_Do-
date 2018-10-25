@@ -237,50 +237,54 @@ button {
 
 </div>
 <center><h3>Choose the region from the drop down menu for which you need to predict flood.</h3></center>
- <div class="container">
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Region
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Andaman & Nicobar Islands</a></li>
-      <li><a href="#">Arunachal Pradesh</a></li>
-      <li><a href="#">Assam & Meghalaya</a></li>
-         <li><a href="#">Nagaland, Manipur, Mizoram, Tripura</a></li>
-         <li><a href="#">Sub Himalayan West Bengal & Sikkim</a></li>
-         <li><a href="#">Gangetic West Bengal</a></li>
-         <li><a href="#">Orissa</a></li>
-         <li><a href="#">Jharkhand</a></li>
-         <li><a href="#">Bihar</a></li>
-         <li><a href="#">East Uttar Pradesh</a></li>
-         <li><a href="#">West Uttar Pradesh</a></li>
-         <li><a href="#">Uttarakhand</a></li>
-        <li><a href="#">Haryana, Delhi & Chandigarh</a></li>
-        <li><a href="#">Punjab</a></li>
-        <li><a href="#">Himachal Pradesh</a></li>
-        <li><a href="#">Jammu & Kashmir</a></li>
-        <li><a href="#">West Rajasthan</a></li>
-        <li><a href="#">East Rajasthan</a></li>
-        <li><a href="#">West Madhya Pradesh</a></li>
-        <li><a href="#">East Madhya Pradesh</a></li>
-        <li><a href="#">Gujarat Region</a></li>
-        <li><a href="#">Saurashtra & Kutch</a></li>
-        <li><a href="#">Konkan & Goa</a></li>
-        <li><a href="#">Madhya Maharashttra</a></li>
-        <li><a href="#">Matathwada</a></li>
-        <li><a href="#">Vidarbha</a></li>
-        <li><a href="#">Chhattisgarh</a></li>
-        <li><a href="#">Coastal Andhra Pradesh</a></li>
-        <li><a href="#">Telangana</a></li>
-        <li><a href="#">Rayalseema</a></li>
-        <li><a href="#">Tamil Nadu</a></li>
-        <li><a href="#">Coastal Karnataka</a></li>
-        <li><a href="#">North Interior Karnataka </a></li>
-        <li><a href="#">South Interior Karnataka</a></li>
-        <li><a href="#">Kerala</a></li>
-        <li><a href="#">Lakshadweep</a></li>
-    </ul>
+      <div class="container">
 
-  </div>
+          <form method="post" action="/prediction" name="regions">
+              {% csrf_token %}
+              <select name="regions">
+        <option value="andaman">Andaman & Nicobar Islands </option>
+        <option value="arunachal">Arunachal Pradesh </option>
+        <option value="assam">Assam & Meghalaya</option>
+        <option value="nagaland">Nagaland, Manipur, Mizoram, Tripura</option>
+        <option value="himalayan">Sub Himalayan West Bengal & Sikkim</option>
+        <option value="gangetic">Gangetic West Bengal</option>
+        <option value = "orissa">Orissa</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Bihar">Bihar</option>
+        <option value="eastup">East Uttar Pradesh</option>
+        <option value="westup">West Uttar Pradesh</option>
+        <option value="uttarakhand">Uttarakhand</option>
+        <option value="haryana">Haryana, Delhi & Chandigarh</option>
+        <option value="punjab">Punjab</option>
+        <option value="hp">Himachal Pradesh</option>
+        <option value="jk">Jammu & Kashmir</option>
+        <option value="westraj">West Rajasthan</option>
+        <option value="eastraj">East Rajasthan</option>
+        <option value="westmp">West Madhya Pradesh</option>
+        <option value="eastmp">East Madhya Pradesh</option>
+        <option value="gujarat">Gujarat Region</option>
+        <option value="saurashtra">Saurashtra & Kutch</option>
+        <option value="goa">Konkan & Goa</option>
+        <option value="madhya maharashtra">Madhya Maharashttra</option>
+        <option value="matathwada">Matathwada</option>
+        <option value="vidarbha">Vidarbha</option>
+        <option value="chhattisgarh">Chhattisgarh</option>
+        <option value="ap">Coastal Andhra Pradesh</option>
+        <option value="telangana">Telangana</option>
+        <option value="rayalseema">Rayalseema</option>
+        <option value="tn">Tamil Nadu</option>
+        <option value="ckarnataka">Coastal Karnataka</option>
+        <option value="nkarnataka">North Interior Karnataka</option>
+        <option value="skarnataka">South Interior Karnataka</option>
+        <option value="Kerala">Kerala </option>
+        <option value="Lakshadweep">Lakshadweep </option>
+        </select>&nbsp;
+
+          <br>
+          <input type="submit" name="Predict" id="predict" value="predict">
+
+      </form>
+
 </div>
 
 </body>

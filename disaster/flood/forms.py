@@ -1,7 +1,6 @@
-from django.db import models
+from django import forms
 
-# Create your models here.
-STATE_CHOICES = [
+STATE_CHOICES= [
     ('andaman', 'Andaman & Nicobar Islands'),
     ('arunachal', 'Arunachal Pradesh'),
     ('assam', 'Assam & Meghalaya'),
@@ -40,9 +39,6 @@ STATE_CHOICES = [
     ('lakshadweep', 'Lakshadweep'),
 
     ]
-class State(models.Model):
-    rainfall = models.CharField(max_length=10)
-    warning = models.TextField(max_length=1000)
-    state = models.CharField(max_length=6, choices=STATE_CHOICES)
-
-
+class StateForm(forms.ModelForm):
+    error_css_class = 'error'
+    state = forms.ChoiceField(choices=STATE_CHOICES,required=True)
