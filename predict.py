@@ -15,7 +15,7 @@ import sys
 
 pd.options.mode.chained_assignment = None 
 
-df = pd.read_csv("/home/aditi/Downloads/rainfall in india 1901-2015.csv")
+df = pd.read_csv("rainfall in india 1901-2015.csv")
 states = df["SUBDIVISION"].unique()
 print(states)
 statename = sys.argv[1]
