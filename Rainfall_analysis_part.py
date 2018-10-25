@@ -41,7 +41,8 @@ x = ['ARUNACHAL PRADESH','COASTAL KARNATAKA','KONKAN & GOA','ANDAMAN & NICOBAR I
 
 y=[3418.857143,3408.409649,2977.686087,2927.439423,2925.487826,2752.217391,2580.695652,2433.619130,1590.886408,1490.487826,1465.696522,1458.169565,1371.728696,1309.303478,1260.345217,1205.000000,1197.633913,1139.684211,1095.459130,1052.904348,1040.391304,979.213043,953.378261,944.358772,943.713043,918.230435,880.233043,827.114783,790.692174,766.206087,717.795652,655.215652,593.535652,530.496522,495.161739,292.673043]
 
-bars = ax.bar(x, y, color='b',width=0.3)    
+for i in range(1):
+    bars = ax.bar(x, y, color='b',width=0.3,label='$ red = danger $' ) 
 for i in range(0,len(x)):
     if (y[i]> 2000):
         bars[i].set_color('r')
@@ -51,4 +52,5 @@ plt.ylabel('Average Annual Rainfall (mm)')
 ax.title.set_fontsize(20)
 ax.xaxis.label.set_fontsize(20)
 ax.yaxis.label.set_fontsize(20)
+ax.legend()
 plt.show()
