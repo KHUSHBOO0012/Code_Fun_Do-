@@ -18,9 +18,9 @@ df = pd.read_csv("C:/Users/welcome/Desktop/Code_Fun_Do/rainfall in india 1901-20
 states = df["SUBDIVISION"].unique()
 print(states)
 #if form.getvalue('regions'):
- # statename = form.getvalue('regions')
+#  statename = form.getvalue('regions')
 #else:
-  #statename = "Not entered"
+#  statename = "Not entered"
 
 statename = "BIHAR"
 
@@ -153,5 +153,7 @@ y_test["predictions"].plot(color ='r')
  
 plt.xlabel('Year')
 plt.ylabel('Rainfall')
-plt.show()
+#plt.show()
+df.hist()
+plt.savefig('/flood/templates/flood/prediction.png')
 
