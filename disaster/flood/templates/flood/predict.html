@@ -82,7 +82,7 @@ body {
 <body>
 
 <div class="outer">
-  <div class="message">Flood warning</div>
+  <div class="message"></div>
   <div class="container" id="sea">
     <ul id="back">
       <li></li>
@@ -168,9 +168,12 @@ $('.fa').on('click', function(){
 });
 </script>
 
-<div class="container" id="image">
-<img src="prediction.png">
-</div>
+{% load static %}
+<center>
+<img src="{% static 'prediction.png' %}" hspace="20" vspace="20" alt="Image not available">
+<h1>FLOOD WARNING</h1>
+</center>
+
 
 </body>
 
