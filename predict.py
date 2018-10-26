@@ -149,5 +149,5 @@ y_test["predictions"].plot(color ='r')
  
 plt.xlabel('Rainfall')
 plt.ylabel('Year')
-plt.show()
+plt.savefig("predictions.png")
 
