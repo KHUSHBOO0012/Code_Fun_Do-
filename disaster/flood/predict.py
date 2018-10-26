@@ -9,7 +9,7 @@ import sys
 import cgi, cgitb
 
 
-#form = cgi.FieldStorage()
+
 
 def main(statename):
     pd.options.mode.chained_assignment = None
@@ -17,15 +17,6 @@ def main(statename):
     df = pd.read_csv("C:/Users/welcome/Desktop/Code_Fun_Do/disaster/flood/rainfall in india 1901-2015.csv")
     states = df["SUBDIVISION"].unique()
     print(states)
-    #if form.getvalue('regions'):
-     # statename = form.getvalue('regions')
-    #else:
-     # statename = "Not entered"
-
-    #statename = "BIHAR"
-
-
-
 
 
     def state(statename):
@@ -35,10 +26,6 @@ def main(statename):
         dfg.fillna(dfg.mean())
         return dfg
     dfg = state(statename)
-
-
-
-
 
     x  = dfg.shape[0]
     k = dfg.index.values[0]
@@ -155,4 +142,5 @@ def main(statename):
     plt.ylabel('Rainfall')
     #plt.show()
     plt.savefig('C:/Users/welcome/Desktop/Code_Fun_Do/disaster/flood/static/prediction.png')
+    plt.clf()
 
