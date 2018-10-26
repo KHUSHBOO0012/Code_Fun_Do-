@@ -168,9 +168,12 @@ $('.fa').on('click', function(){
 });
 </script>
 
-<div class="container" id="image">
-<img src="prediction.png">
-</div>
+{% load static %}
+<center>
+<img src="{% static 'prediction.png' %}" hspace="20" vspace="50" alt="Image not available">
+<h1>Prediction</h1>
+</center>
+
 
 </body>
 
