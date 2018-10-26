@@ -4,5 +4,5 @@ from .models import *
 
 def index(request):
      return render(request, 'flood/index.html')
-
-# Create your views here.
+def prediction(request):
+     return render(request, 'flood/predict.html')
