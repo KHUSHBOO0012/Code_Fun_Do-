@@ -141,6 +141,6 @@ def main(statename):
     plt.xlabel('Year')
     plt.ylabel('Rainfall')
     #plt.show()
-    plt.savefig('C:/Users/welcome/Desktop/Code_Fun_Do/disaster/flood/static/prediction.png')
+    plt.savefig('prediction.png')
     plt.clf()
 
